@@ -1,0 +1,11 @@
+﻿  AnimatedSprite.cpp
+c:\users\c00231934\desktop\muddygames-gameplay-programming-i-lab-03-60ce4b8b1ccb\animationfsm\animatedsprite.cpp(42): warning C4018: '>': signed/unsigned mismatch
+  PlayerMachine.cpp
+  Climbing.cpp
+  Idle.cpp
+  Input.cpp
+  Jumping.cpp
+  main.cpp
+  Player.cpp
+  Generating Code...
+  AnimationFSM.vcxproj -> C:\Users\c00231934\Desktop\MuddyGames-gameplay-programming-i-lab-03-60ce4b8b1ccb\Debug\AnimationFSM.exe
