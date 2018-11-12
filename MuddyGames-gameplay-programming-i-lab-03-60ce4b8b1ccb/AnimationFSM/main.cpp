@@ -57,27 +57,39 @@ int main()
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 				{
 					input.setCurrent(Input::Action::LEFT);
+					animated_sprite.initialFrame = 12;
+					animated_sprite.lastFrame = 17;
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 				{
 					input.setCurrent(Input::Action::RIGHT);
+					animated_sprite.initialFrame = 6;
+					animated_sprite.lastFrame = 11;
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 				{
 					input.setCurrent(Input::Action::UP);
+					animated_sprite.initialFrame = 31;
+					animated_sprite.lastFrame = 36;
 				}
 				// Using function keys as other keys dont work?
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::F1))
 				{
 					input.setCurrent(Input::Action::F1);
+					animated_sprite.initialFrame = 24;
+					animated_sprite.lastFrame = 29;
 				}
 				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::F2))
 				{
 					input.setCurrent(Input::Action::F2);
+					animated_sprite.initialFrame = 18;
+					animated_sprite.lastFrame = 23;
 				}
 				break;
 			default:
 				input.setCurrent(Input::Action::IDLE);
+				animated_sprite.initialFrame = 0;
+				animated_sprite.lastFrame = 6;
 				break;
 			}
 		}

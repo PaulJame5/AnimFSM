@@ -24,6 +24,9 @@ public:
 	void addFrame(IntRect&);
 	const int getCurrentFrame();
 	void update();
+
+	int initialFrame;
+	int lastFrame;
 	
 private:
 	Clock m_clock;
