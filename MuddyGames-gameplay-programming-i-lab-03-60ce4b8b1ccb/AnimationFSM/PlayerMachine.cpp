@@ -32,6 +32,14 @@ void PlayerFSM::idle()
 {
 	m_current->idle(this);
 }
+void PlayerFSM::left()
+{
+	m_current->left(this);
+}
+void PlayerFSM::right()
+{
+	m_current->right(this);
+}
 
 void PlayerFSM::jumping()
 {
@@ -41,4 +49,9 @@ void PlayerFSM::jumping()
 void PlayerFSM::climbing()
 {
 	m_current->climbing(this);
+}
+
+void PlayerFSM::attacking()
+{
+	m_current->attacking(this);
 }

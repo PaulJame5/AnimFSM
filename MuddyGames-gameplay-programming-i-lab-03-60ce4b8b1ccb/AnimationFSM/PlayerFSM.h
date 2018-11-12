@@ -17,12 +17,16 @@ public:
 	~PlayerFSM();
 	void setCurrent(State* s);
 	void setPrevious(State* s);
+
 	State* getCurrent();
 	State* getPrevious();
 	
 	void idle();
+	void left();
+	void right();
 	void jumping();
 	void climbing();
+	void attacking();
 
 // Try uncommenting and comment the declaration above
 //private:

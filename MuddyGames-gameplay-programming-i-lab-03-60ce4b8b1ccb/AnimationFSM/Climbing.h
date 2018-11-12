@@ -10,6 +10,8 @@ public:
 	~Climbing() {};
 	void idle(PlayerFSM* a);
 	void jumping(PlayerFSM* a);
+	void left(PlayerFSM* a);
+	void right(PlayerFSM* a);
 };
 
 #endif // !IDLE_H

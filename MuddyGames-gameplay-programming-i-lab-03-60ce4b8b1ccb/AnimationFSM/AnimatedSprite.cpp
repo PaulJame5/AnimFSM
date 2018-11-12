@@ -1,5 +1,5 @@
 #include <AnimatedSprite.h>
-
+#include <PlayerFSM.h>
 AnimatedSprite::AnimatedSprite() 
 {
 	m_current_frame = 0;
@@ -38,6 +38,7 @@ const int AnimatedSprite::getCurrentFrame() {
 }
 
 void AnimatedSprite::update(){
+	
 	if (m_clock.getElapsedTime() > m_time) {
 		if (m_frames.size() > m_current_frame + 1)
 		{

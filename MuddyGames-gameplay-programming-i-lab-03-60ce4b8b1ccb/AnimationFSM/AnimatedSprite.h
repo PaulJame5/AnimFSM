@@ -5,6 +5,7 @@
 #include <SFML\System\Clock.hpp>
 #include <vector>
 #include <Debug.h>
+#include <PlayerFSM.h>
 
 using namespace std;
 using namespace sf;

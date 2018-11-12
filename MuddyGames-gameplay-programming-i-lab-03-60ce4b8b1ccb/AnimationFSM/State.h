@@ -8,9 +8,13 @@
 #include <PlayerFSM.h>
 #include <Debug.h>
 
+
 class State
 {
 public:
+
+	static int rowAnim; // int used for setting a number based on state in animation
+
 	virtual void handleInput() {}
 
 	virtual void update() {}
@@ -26,6 +30,19 @@ public:
 	virtual void climbing(PlayerFSM* a)
 	{
 		DEBUG_MSG("State::Climbing");
+	}
+	virtual void attacking(PlayerFSM* a)
+	{
+		DEBUG_MSG("State::Attacking");
+	}
+
+	virtual void right(PlayerFSM* a)
+	{
+		DEBUG_MSG("State::Right");
+	}
+	virtual void left(PlayerFSM* a)
+	{
+		DEBUG_MSG("State::Left");
 	}
 };
 

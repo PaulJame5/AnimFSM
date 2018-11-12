@@ -4,6 +4,7 @@
 #include <Player.h>
 #include <Input.h>
 #include <Debug.h>
+#include <Windows.h>
 
 using namespace std;
 
@@ -21,12 +22,19 @@ int main()
 
 	// Setup Players Default Animated Sprite
 	AnimatedSprite animated_sprite(texture);
-	animated_sprite.addFrame(sf::IntRect(3, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(88, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(173, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(258, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(343, 3, 84, 84));
-	animated_sprite.addFrame(sf::IntRect(428, 3, 84, 84));
+
+	// Loop through texture and add it to animated_sprite frame
+	for (int y = 0; y < 6; y++)
+	{
+		for (int x = 0; x < 6; x++)
+		{
+			int xCol = 3 + (85 * x);
+			int yCol = 3 + (85 * y);
+
+			animated_sprite.addFrame(sf::IntRect(xCol, yCol, 84, 84));
+		}
+	}
+
 
 	// Setup the Player
 	Player player(animated_sprite);
@@ -58,6 +66,15 @@ int main()
 				{
 					input.setCurrent(Input::Action::UP);
 				}
+				// Using function keys as other keys dont work?
+				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::F1))
+				{
+					input.setCurrent(Input::Action::F1);
+				}
+				else if (sf::Keyboard::isKeyPressed(sf::Keyboard::F2))
+				{
+					input.setCurrent(Input::Action::F2);
+				}
 				break;
 			default:
 				input.setCurrent(Input::Action::IDLE);
@@ -76,7 +93,7 @@ int main()
 
 		// Draw the Players Current Animated Sprite
 		window.draw(player.getAnimatedSprite());
-
+		
 		// Update the window
 		window.display();
 	}
